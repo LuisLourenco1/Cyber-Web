@@ -19,7 +19,7 @@ Existem três tipos de XSS:
 2. **Stored XSS**: O atacante envia um script malicioso para um site, que é armazenado em um banco de dados ou em um servidor. Quando a vítima acessa o site, o script é executado no navegador da vítima.
 3. **DOM-based XSS**: O atacante injeta um script malicioso em um site, que não é enviado para o servidor. O script é executado no navegador da vítima.
 
-*Reflected XSS*
+**Reflected XSS**
 
 O Reflected XSS é o tipo de XSS que foi explorado no site AltoroMutual. O site possui um campo de busca, onde o usuário pode buscar por um termo. O site então retorna uma página com os resultados da busca. O problema é que o site não valida o termo buscado, e simplesmente retorna o termo buscado na página de resultados. Isso permite que um atacante injete um script malicioso no termo buscado, que será executado no navegador da vítima.
 
@@ -28,11 +28,15 @@ Para explorar a vulnerabilidade, basta inserir um script malicioso no campo de b
 
 Outra aplicação desse ataque é redirecionar o usuário para uma página maliciosa. No exemplo abaixo, é inserido o script:
 
+```
 <a href="http://sitemalicioso.com"><p>Clique Aqui!</p>
+```
 
 Dessa forma, um atacante pode enganar uma vítima enviando a ela o link com essa query:
 
+```
 https://demo.testfire.net/search.jsp?query=<a+href%3D"http%3A%2F%2Fsitemalicioso.com"><p>Clique+Aqui%21<%2Fp>
+```
 
 Enganando a vítima para que ela clique no link, e seja redirecionada para o site malicioso.
 
