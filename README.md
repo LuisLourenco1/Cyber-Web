@@ -26,11 +26,15 @@ Para explorar a vulnerabilidade, basta inserir um script malicioso no campo de b
 
 Outra aplicação desse ataque é redirecionar o usuário para uma página maliciosa. No exemplo abaixo, é inserido o script:
 
+```
 <a href="http://sitemalicioso.com"><p>Clique Aqui!</p>
+```
 
 Dessa forma, um atacante pode enganar uma vítima enviando a ela o link com essa query:
 
+```
 https://demo.testfire.net/search.jsp?query=<a+href%3D"http%3A%2F%2Fsitemalicioso.com"><p>Clique+Aqui%21<%2Fp>
+```
 
 Enganando a vítima para que ela clique no link, e seja redirecionada para o site malicioso.
 
