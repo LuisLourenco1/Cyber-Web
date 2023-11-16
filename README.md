@@ -25,6 +25,8 @@ O Reflected XSS é o tipo de XSS que foi explorado no site AltoroMutual. O site 
 
 #### Explorando a vulnerabilidade
 Para explorar a vulnerabilidade, basta inserir um script malicioso no campo de busca. O script será executado na página de resultados. No exemplo abaixo, o script exibe um alerta com a mensagem "XSS":
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/23c3ed7d-a58e-4161-aa08-c8e3b526f34f)
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/c6a09f81-a100-4525-b559-26d8f7647f3a)
 
 Outra aplicação desse ataque é redirecionar o usuário para uma página maliciosa. No exemplo abaixo, é inserido o script:
 
@@ -37,6 +39,8 @@ Dessa forma, um atacante pode enganar uma vítima enviando a ela o link com essa
 ```
 https://demo.testfire.net/search.jsp?query=<a+href%3D"http%3A%2F%2Fsitemalicioso.com"><p>Clique+Aqui%21<%2Fp>
 ```
+
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/c03693ca-46b2-4749-ba78-fbcc33648359)
 
 Enganando a vítima para que ela clique no link, e seja redirecionada para o site malicioso.
 
