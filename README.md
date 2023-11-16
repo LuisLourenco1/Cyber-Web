@@ -26,6 +26,7 @@ O Reflected XSS é o tipo de XSS que foi explorado no site AltoroMutual. O site 
 #### Explorando a vulnerabilidade
 Para explorar a vulnerabilidade, basta inserir um script malicioso no campo de busca. O script será executado na página de resultados. No exemplo abaixo, o script exibe um alerta com a mensagem "XSS":
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/23c3ed7d-a58e-4161-aa08-c8e3b526f34f)
+
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/c6a09f81-a100-4525-b559-26d8f7647f3a)
 
 Outra aplicação desse ataque é redirecionar o usuário para uma página maliciosa. No exemplo abaixo, é inserido o script:
@@ -44,4 +45,24 @@ https://demo.testfire.net/search.jsp?query=<a+href%3D"http%3A%2F%2Fsitemalicioso
 
 Enganando a vítima para que ela clique no link, e seja redirecionada para o site malicioso.
 
-# **2. **
+# **2. SQL Injection**
+O SQL Injection é uma vulnerabilidade que permite que um atacante execute comandos SQL maliciosos em um banco de dados. Essa vulnerabilidade pode permitir que um atacante acesse, modifique e exclua dados do banco de dados. Além disso, o atacante pode executar comandos do sistema operacional, como ler e gravar arquivos e executar programas.
+
+#### Explorando a vulnerabilidade
+Para explorar a vulnerabilidade, basta inserir um comando SQL malicioso no campo de busca. O site então retorna uma página com os resultados da busca. O problema é que o site não valida o termo buscado, e simplesmente retorna o termo buscado na página de resultados.
+
+Nesse caso, para o campo de login e senha, é possível inserir o comando SQL:
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/1df7367b-7727-4d35-bf6b-26493bd431d8)
+
+```
+'or 1=1--+
+```
+
+e digitar qualquer coisa para o campo de senha. Dessa forma, ele faz login automaticamente.
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/3297afec-8323-439c-84b9-4cb1fe37e0ed)
+
+É possível também, sabendo o nome de login de um usuário, é possível fazer login utilizando esse comando no campo de senha:
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/2b30da36-b675-44f7-82b4-73378e774b72)
+
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/ff6e6c6d-27f1-43e3-82ec-5141adb6e5c0)
+
