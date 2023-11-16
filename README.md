@@ -58,11 +58,24 @@ Nesse caso, para o campo de login e senha, é possível inserir o comando SQL:
 'or 1=1--+
 ```
 
-e digitar qualquer coisa para o campo de senha. Dessa forma, ele faz login automaticamente.
+A query no processo de autenticação do usuário segue o seguinte formato:
+
+```
+SELECT * from users WHERE username = 'username' AND password = 'password'
+```
+
+- A aspa simples única é utiliza para delimitar o valor do campo
+- A condição lógica 1=1 sempre é verdadeira
+- O --+ é utilizado para comentar o restante da query, ignorando o valor do campo senha
+
+Dessa forma, a query fica:
+![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/98788b6b-9395-4661-90f8-61f7a95877ad)
+
+Após o WHERE essa condição sempre será verdadeira e serão então retornados todos os usuários da tabela, sendo utilizado o primeiro na autentição, que costuma ser o administrador.
+
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/3297afec-8323-439c-84b9-4cb1fe37e0ed)
 
 É possível também, sabendo o nome de login de um usuário, é possível fazer login utilizando esse comando no campo de senha:
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/2b30da36-b675-44f7-82b4-73378e774b72)
 
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/ff6e6c6d-27f1-43e3-82ec-5141adb6e5c0)
-
