@@ -7,7 +7,6 @@ A abordagem utilizada para a realização do trabalho foi explorar vulnerabilida
 ## Vulnerabilidades exploradas
 1. **Cross-Site Scripting (XSS)**
 2. **SQL Injection**
-3. ****
 
 # **1. Cross-Site Scripting (XSS)**
 A vulnerabilidade de Cross-Site Scripting (XSS) é uma vulnerabilidade de injeção de código que permite que um atacante execute scripts maliciosos em um aplicativo da web. Os atacantes podem usar essa vulnerabilidade para contornar as medidas de segurança do aplicativo da web. Os scripts maliciosos executados pelo navegador da vítima têm acesso a qualquer informação que o usuário tenha acesso. Essa vulnerabilidade pode permitir que um atacante altere a aparência da página, roube informações ou até mesmo controle o navegador da vítima.
@@ -40,6 +39,7 @@ Dessa forma, um atacante pode enganar uma vítima enviando a ela o link com essa
 ```
 https://demo.testfire.net/search.jsp?query=<a+href%3D"http%3A%2F%2Fsitemalicioso.com"><p>Clique+Aqui%21<%2Fp>
 ```
+![Explorando vulnerabilidade](https://github.com/LuisLourenco1/Cyber-Web/assets/99414301/2b7a0f5c-8fef-4b20-89c5-0ab7b0187b4d)
 
 ![image](https://github.com/LuisLourenco1/Cyber-Web/assets/103335009/c03693ca-46b2-4749-ba78-fbcc33648359)
 
